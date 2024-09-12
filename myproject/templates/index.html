@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comments List</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <ul style="font-size: 20px;">
+        {% for comment in comments %}
+            <li>{{ comment.name }}: {{ comment.comment }} (Status: {{ comment.status }})   </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_comment' %}">Add a Comment</a>
+    <h5>Please have look on cmd or ide panel on which you are running django server to see the output log.</h5>
+    <h5>After adding or updating the existing comment.</h5>
+</body>
+</html>
